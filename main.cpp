@@ -1,5 +1,10 @@
 // Copyright 2015 Red Blob Games <redblobgames@gmail.com>
 // License: Apache v2.0 <http://www.apache.org/licenses/LICENSE-2.0.html>
+
+#define SDL_MAIN_HANDLED
+
+#include <GL/glew.h>
+
 #include "common.h"
 #include "glwrappers.h"
 #include "window.h"
@@ -19,7 +24,6 @@
 #define SHOW_SHAPES 0
 #define SHOW_IMGUI 1
 #define SHOW_OVERLAY 1
-#define GLEW_STATIC
 
 std::unique_ptr<Window> window;
 std::unique_ptr<RenderSprites> sprite_layer;
@@ -98,8 +102,7 @@ void main_loop() {
   }
 }
 
-
-int main(int, char**) {
+int main() {
   if (SDL_Init(SDL_INIT_VIDEO) < 0) { FAIL("SDL_Init"); }
   SDL_GL_SetSwapInterval(1);
 
@@ -116,6 +119,8 @@ int main(int, char**) {
   SDL_FillRect(overlay_surface, &fillarea, SDL_MapRGBA(overlay_surface->format, 64, 32, 0, 192));
 
   font.Draw(overlay_surface, 1, font.Baseline(), "Hello world");
+
+  glewInit();
 
 #if SHOW_SPRITES
   sprite_layer = std::unique_ptr<RenderSprites>(new RenderSprites);

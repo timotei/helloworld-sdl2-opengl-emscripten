@@ -1,6 +1,7 @@
 // Copyright 2015 Red Blob Games <redblobgames@gmail.com>
 // License: Apache v2.0 <http://www.apache.org/licenses/LICENSE-2.0.html>
 
+#include <GL/glew.h>
 #include "glwrappers.h"
 #include "common.h"
 

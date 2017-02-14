@@ -5,12 +5,13 @@
 #include "window.h"
 #include "atlas.h"
 
+#include <GL/glew.h>
+#include <GL/GL.h>
 #include <SDL2/SDL.h>
 #include "glwrappers.h"
 
 #include <vector>
 #include <algorithm>
-
 
 
 // NOTE: I split the shader attributes into a static set that has to
