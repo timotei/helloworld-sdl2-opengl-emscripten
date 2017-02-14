@@ -12,6 +12,7 @@
 #include <algorithm>
 
 
+
 // NOTE: I split the shader attributes into a static set that has to
 // be updated when the *set* of sprites changes and a dynamic set that
 // has to be updated every frame. I was hoping this would be a

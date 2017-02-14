@@ -19,6 +19,7 @@
 #define SHOW_SHAPES 0
 #define SHOW_IMGUI 1
 #define SHOW_OVERLAY 1
+#define GLEW_STATIC
 
 std::unique_ptr<Window> window;
 std::unique_ptr<RenderSprites> sprite_layer;
