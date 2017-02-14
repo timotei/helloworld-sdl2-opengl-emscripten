@@ -1,6 +1,5 @@
 // Copyright 2015 Red Blob Games <redblobgames@gmail.com>
 // License: Apache v2.0 <http://www.apache.org/licenses/LICENSE-2.0.html>
-
 #include "common.h"
 #include "glwrappers.h"
 #include "window.h"
@@ -151,4 +150,6 @@ int main(int, char**) {
   shape_layer = nullptr;
   window = nullptr;
   SDL_Quit();
+
+  return 0;
 }

@@ -4,7 +4,6 @@
 /** Convenience functions, plus RAII wrappers for SDL and GL objects that
  * come in construct/destroy pairs.
  */
-
 #ifndef GLWRAPPERS_H
 #define GLWRAPPERS_H
 

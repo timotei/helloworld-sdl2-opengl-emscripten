@@ -9,6 +9,7 @@
 #include "glwrappers.h"
 
 #include <vector>
+#include <algorithm>
 
 
 // NOTE: I split the shader attributes into a static set that has to

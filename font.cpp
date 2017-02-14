@@ -1,6 +1,5 @@
 // Copyright 2015 Red Blob Games <redblobgames@gmail.com>
 // License: Apache v2.0 <http://www.apache.org/licenses/LICENSE-2.0.html>
-
 #include "font.h"
 #include "common.h"
 
@@ -8,6 +7,7 @@
 
 #include <fstream>
 #include <vector>
+#include <algorithm>
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wfloat-equal"
@@ -85,7 +85,7 @@ Font::Font(const char* filename, float ptsize, float xadvance_adjust): self(new 
     M.region.h = int(ceil((q.t1 - q.t0) * height));
     M.xadvance = int(round(x + xadvance_adjust));
     M.ybaseline = int(-q.y0);
-    self->baseline = std::max(self->baseline, M.ybaseline);
+    self->baseline = (std::max)(self->baseline, M.ybaseline);
   }
   
   // Copy the grayscale bitmap into RGBA
